@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Quick Start Guide Android</title>
+  <style>
+
+  </style>
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Bootstrap 4 Template For Software Startups" />
+  <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
+  <link rel="shortcut icon" href="https://penguinin.com/wp-content/uploads/2018/07/fav3.png" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome JS-->
+  <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+
+  <!-- main CSS -->
+  <link id="theme-style" rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="docs-page">
+  <div class="cover">
+
+  </div>
+  <div id="mySidenav" class="sidenav2">
+
+    <a href="index.html">
+      <span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Overview
+    </a>
+    <a href="android.html"><span class="theme-icon-holder mr-2"><i class="fab fa-android"></i></span>Android</a>
+    <a href="iOS.html"><span class="theme-icon-holder mr-2"><i class="fab fa-apple"></i></span>iOS</a>
+
+  </div>
+
+  <div id="main" class="main">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark  border-bottom fixed-top py-2"
+      style="z-index: 1031;background-color: black;">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo-icon mr-2" src="https://penguinin.com/penguinin.com/wp-content/uploads/2018/05/logo.png"
+          alt="logo" style="width: 150px;" />
+
+        <span class="logo-text  d-none d-md-inline">Penguin<span class="text-alt" style="color:orange">IN</span>
+          Developer</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto mr-3">
+          <a class="nav-link" href="https://penguinin.com/about-us/" target="_blank">PenguinIN</a>
+          <a class="nav-link" href="index.html">Home</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar bg-light fixed-top border-bottom" style="top: 59px;">
+      <button id="docs-sidebar-toggler" class="docs-sidebar-toggler" type="button" style="font-size: 20px;">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="docs-wrapper">
+
+
+
+    </div>
+    <!--//docs-sidebar-->
+    <div class="container">
+      <article class="docs-article" id="section-1">
+        <header class="docs-header">
+          <div class="guide">
+            <h1 id="sdk-and-sample-application-delivery" class="custom-header">
+              SDK and Sample Application Delivery
+            </h1>
+            <br>
+
+
+            <p>
+              The Android SDK is shared as an <strong>.aar</strong> file and the sample application as a build-able
+              source code to
+              generate the required <strong>.apk</strong> file. This file can be integrated in Android Studio via Gradle
+              file. Please
+              note that the .aar file needs to be integrated into Lib (Library) folder, then in the project Build.gradle
+              file.
+            </p>
+            <br>
+            <p>
+              To Download the Android SDK and Sample app <a
+                href="https://penguinin-my.sharepoint.com/:u:/p/devsupport/EeJFn9vifNxNqHYpaqmz1YkB87r_6CfTz3qZBiqJFMcIUw?e=Nx4qb6&download=1"
+                style="display: inline;font-weight: bold; text-decoration: underline;" target="_blank"
+                class="fqalink">Click here.</a>
+
+            </p>
+            <br>
+            <h1 id="sample-application" class="custom-header">Sample Application</h1><br>
+            <p>
+
+              The sample app will initialize SDK over controlled configurations then return the detected PoI list
+              periodically. The list contains the list of PoI which are most likely to be present in the vicinity of the
+              user. </p><br>
+            <p> Detected PoI list is fetched from the SDK and of course requires complete BLE beacon roll-out and site
+              calibration data to have been completed.</p>
+            <br>
+            <p>
+              The presence of at least one BLE beacon is required.
+            </p>
+            <br>
+            <p>The steps below explain how to run the sample application:</p>
+            <ul>
+              <li>
+                <p>Install Sample App. You may need to build the sample app code to generate the needed <strong>.apk
+                  </strong> file. </p>
+
+
+              </li>
+              <li>
+                <p>
+                  Grant all requested permissions.
+
+                </p>
+              </li>
+              <li>
+                <p>
+
+                  Main screen will show the following:
+                </p>
+                <ol>
+                  <li class=MsoNormal style='line-height:normal;padding-bottom: 0;'><span>Detected PoIs (Shows Detected
+                      PoIs list as concatenated string:
+                      PoIs ID1_TrustFactor1#PoIs ID2_TrustFactor2#
+                      )</span>
+                    <p></p>
+                  </li>
+                  <li class=MsoNormal style='line-height:normal;padding-bottom: 0'><span>Last Check Date Time.</span>
+                  </li>
+                  <li class=MsoNormal style='line-height:normal;padding-bottom: 0'><span>Current SDK Status:</span>
+
+
+                    <ul>
+                      <li style='line-height:normal;padding-bottom: 0;'>Initializing.</li>
+                      <li style='line-height:normal;padding-bottom: 0;'>Loading Data.</li>
+                      <li style='line-height:normal;padding-bottom: 0;'>Stopped for Empty Data.</li>
+                      <li style='line-height:normal;padding-bottom: 0;'>Detection.</li>
+                    </ul>
+                  </li>
+                  <li class=MsoNormal style='line-height:normal;padding-bottom: 0'><span>SDK version Number.</span></li>
+                  <li class=MsoNormal style='line-height:normal;padding-bottom: 0'><span>SDK initialization status
+                      (Success\Failed).</span></li>
+                </ol>
+
+
+                <div class="ctn" style=" margin-top: 20px;
+                margin-bottom: 20px;">
+
+                  <img src="img/scan1.jpg" alt="iOSLocationPermission" class="left" style="width: 30%;">
+                </div>
+
+              </li>
+              </li>
+            </ul>
+
+            <h1 id="sdk-and-sample-app-configuration" class="custom-header">
+              SDK Configuration
+            </h1>
+            <br>
+            <p>
+              It is likely that during the development cycle, parameters for the SDK and the sample app will change. To
+              change
+              <strong>SDK configuration</strong> you can start modifying the following parameters:
+            </p>
+            <ul>
+              <li style="padding-bottom: 0">Server IP.</li>
+              <li style="padding-bottom: 0">Service Name.</li>
+              <li style="padding-bottom: 0">Active Context.</li>
+              <li style="padding-bottom: 0">Active Activity.</li>
+              <li style="padding-bottom: 0">User Name.</li>
+
+
+            </ul>
+            <p>
+              <strong> Code Example:
+              </strong>
+            </p>
+            <ul>
+              <li style="padding-bottom: 0">
+                <strong>initialization code</strong>
+                <br>
+                <div class="ctn" style="justify-content:left;
+                  margin-top: 20px;
+                margin-bottom: 20px;">
+
+                  <img class="codeimage" src="img/SDK Initialization.PNG" alt="androidcontant-img" style="width: 60%;">
+
+                </div>
+              </li>
+              <li style="padding-bottom: 0">
+                <strong>fetching detected PoI ID from SDK</strong>
+
+                <br>
+                <div class="ctn" style="justify-content:left;
+                  margin-top: 20px;
+                margin-bottom: 20px;">
+
+                  <img class="codeimage" src="img/Get Detected PoI - v2.PNG" alt="androidcontant-img"
+                    style="width: 70%;">
+
+                </div>
+              </li>
+
+            </ul>
+            <br class="space">
+            <br class="space">
+
+
+
+        </header>
+
+      </article>
+
+
+    </div>
+    <footer class="footer-wrapper">
+      <p class="text-center">
+        7700 Irvine Center Drive Irvine CA 92618, USA
+      </p>
+      <div class="footer-social-icons d-flex justify-content-center my-4">
+        <a href="https://www.linkedin.com/company/penguinin/" target="_blank" style="color: white;">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCKKwXDxzrCHxaJw1jz5GT0g?view_as=subscriber" target="_blank"
+          style="color: white;">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div class="row">
+        <div class="col d-none d-md-block"></div>
+        <div class="col">
+          <ul>
+            <li>RESOURCES</li>
+            <li>
+              <a href="android.html" target="_blank" style="color: white;">Android SDK</a>
+            </li>
+            <li>
+              <a href="iOS.html" target="_blank" style="color: white;">iOS SDK</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>SUPPORT</li>
+
+            <li>
+              <a href="https://penguinin.com/contact-us/" target="_blank" style="color: white;">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>ABOUT PenguinIN</li>
+            <li>
+              <a href="https://penguinin.com/about-us/" target="_blank" style="color: white;">PenguinIN Website</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col d-none d-md-block"></div>
+      </div>
+    </footer>
+  </div>
+  <!--//docs-wrapper-->
+  </div>
+  <!-- Javascript -->
+  <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+  <script src="assets/plugins/popper.min.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Page Specific JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script src="assets/js/highlight-custom.js"></script>
+  <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+  <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+  <script src="assets/js/docs.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

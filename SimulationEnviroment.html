@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Simulation Enviroment</title>
+
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Bootstrap 4 Template For Software Startups" />
+  <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
+  <link rel="shortcut icon" href="https://penguinin.com/wp-content/uploads/2018/07/fav3.png" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome JS-->
+  <script defer src="assets/fontawesome/js/all.min.js"></script>
+
+  <!-- Theme CSS -->
+  <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+
+  <!-- main CSS -->
+  <link id="theme-style" rel="stylesheet" href="assets/css/main.css" />
+</head>
+<style>
+
+</style>
+
+<body class="docs-page">
+  <div class="cover">
+
+  </div>
+  <div id="mySidenav" class="sidenav2">
+
+    <a href="index.html">
+      <span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Overview
+    </a>
+    <a href="android.html"><span class="theme-icon-holder mr-2"><i class="fab fa-android"></i></span>Android</a>
+    <a href="iOS.html"><span class="theme-icon-holder mr-2"><i class="fab fa-apple"></i></span>iOS</a>
+
+  </div>
+
+  <div id="main" class="main">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark  border-bottom fixed-top py-2"
+      style="z-index: 1031;background-color: black;">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo-icon mr-2" src="https://penguinin.com/penguinin.com/wp-content/uploads/2018/05/logo.png"
+          alt="logo" style="width: 150px;" />
+
+        <span class="logo-text  d-none d-md-inline">Penguin<span class="text-alt" style="color:orange">IN</span>
+          Developer</span></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto mr-3">
+          <a target="_blank" class="nav-link" href="https://penguinin.com/about-us/">PenguinIN</a>
+          <a class="nav-link" href="index.html">Home</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar bg-light fixed-top border-bottom" style="top: 59px;">
+      <button id="docs-sidebar-toggler" class="docs-sidebar-toggler" type="button" style="font-size: 20px;">
+        <i class="fa fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="docs-wrapper">
+
+
+
+    </div>
+    <div class="container">
+
+      <article class="docs-article" id="section-1">
+        <header class="docs-header">
+          <h1 class="docs-heading">Set Simulation Environment</h1>
+          <section class="docs-intro">
+
+            <br>
+            <p>The application developer receives SDK and a companion sample app which integrates the SDK. However, in
+              order for the sample app to return point of interest ID, there must be a BLE beacon present and configured
+              correctly with the parameters in the table below:</p>
+            <br>
+            <table>
+              <thead>
+                <tr>
+                  <th style="text-align:left">Paramter</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="text-align:left">Protocol</td>
+                  <td>iBeacon</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left">UUID</td>
+                  <td>D2C56DB5-DFFB-48D2-B060-D0F5A71096EE</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left">Major</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left">Minor</td>
+                  <td>402</td>
+                </tr>
+                <tr>
+                  <td style="text-align:left">Tx Power</td>
+                  <td>-65</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <p>In the likely event that the application developer does not have a physical beacon, then one of many
+              simulator beacon tools can be used. Below is an example of such a tool and the steps used to configure
+              this tool with the above parameters.</p>
+            <ul>
+              <li>
+                <p>Download the following app from the Android play store (Apple alternatives exist):
+                  <br>
+                  <br>
+                  <span class="imgsdk2-container">
+
+                    <img class="imgsdk2" src="./img/BeaconSimulator.png" alt="" style="margin-top: 15px;">
+                  </span>
+                  <br>
+                </p>
+              <li>Add new simulated beacon:
+                <br>
+                <br>
+                <div class="containersdk">
+                  <span style="display:inline-block">
+                    <img src="./img/BeaconSimulator1.png" alt="" style="width: 70%;">
+                  </span>
+                  <span style="display:inline-block">
+                    <img src="./img/BeaconSimulator2.png" alt="" style="width: 70.5%;">
+                  </span><span style="display:inline-block">
+                    <img src="./img/BeaconSimulator3.png" alt="" style="width: 72%;"></span>
+                </div>
+              </li>
+              </li>
+            </ul>
+            <br>
+            <p>
+              Now the beacon has been correctly configured, we are ready to build a simulation scenario leveraging this
+              beacon(s). Below is the sample deployment configure in the sample app provided. There are six points of
+              interest. You will require a beacon configuration as shown in the figure below per PoI. To test all PoIs
+              concurrently, we will need as many beacon simulators as PoIs. However, we can setup lesser number than the
+              maximum provided as long as we still that the minor and major values are configured as in the figure
+              below.</p>
+
+            <br>
+            <p>
+              Adjusting the separation distance between the PoIs is likely to show how a false trigger actually may
+              happen. Smaller distances will increase the probability of a false trigger and will result in a PoI having
+              lesser certainty number returned by the SDK.
+            </p>
+            <br>
+            <div class="ctn" style="justify-content:center;
+            margin-top: 20px;
+          margin-bottom: 20px;">
+
+              <img class="codeimage" src="img/Aquarium.png" alt="androidcontant-img" style="width: 70%;">
+
+            </div>
+
+
+
+
+            <br class="space">
+
+
+          </section>
+          <!--//docs-intro-->
+        </header>
+
+      </article>
+      <!--//docs-article-->
+
+
+
+
+    </div>
+    <footer class="footer-wrapper">
+      <p class="text-center">
+        7700 Irvine Center Drive Irvine CA 92618, USA
+      </p>
+      <div class="footer-social-icons d-flex justify-content-center my-4">
+        <a href="https://www.linkedin.com/company/penguinin/" target="_blank" style="color: white;">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCKKwXDxzrCHxaJw1jz5GT0g?view_as=subscriber" target="_blank"
+          style="color: white;">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <div class="row">
+        <div class="col d-none d-md-block"></div>
+        <div class="col">
+          <ul>
+            <li>RESOURCES</li>
+            <li>
+              <a href="android.html" target="_blank" style="color: white;">Android SDK</a>
+            </li>
+            <li>
+              <a href="iOS.html" target="_blank" style="color: white;">iOS SDK</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>SUPPORT</li>
+
+            <li>
+              <a href="https://penguinin.com/contact-us/" target="_blank" style="color: white;">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>ABOUT PenguinIN</li>
+            <li>
+              <a href="https://penguinin.com/about-us/" target="_blank" style="color: white;">PenguinIN Website</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col d-none d-md-block"></div>
+      </div>
+    </footer>
+  </div>
+  <!--//docs-wrapper-->
+  </div>
+  <!-- Javascript -->
+  <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+  <script src="assets/plugins/popper.min.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Page Specific JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script src="assets/js/highlight-custom.js"></script>
+  <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+  <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+  <script src="assets/js/docs.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

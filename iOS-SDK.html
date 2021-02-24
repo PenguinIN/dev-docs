@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>iOS Sdk</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Bootstrap 4 Template For Software Startups" />
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media" />
+    <link rel="shortcut icon" href="https://penguinin.com/wp-content/uploads/2018/07/fav3.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- FontAwesome JS-->
+    <!-- <script defer src="assets/fontawesome/js/all.min.js"></script> -->
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+
+    <!-- main CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="docs-page">
+    <div class="cover">
+
+    </div>
+    <div id="mySidenav" class="sidenav2">
+
+        <a href="index.html">
+            <span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Overview
+        </a>
+        <a href="android.html"><span class="theme-icon-holder mr-2"><i class="fab fa-android"></i></span>Android</a></a>
+        <a href="iOS.html"><span class="theme-icon-holder mr-2"><i class="fab fa-apple"></i></span>iOS</a></a>
+
+    </div>
+
+    <div id="main" class="main">
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark  border-bottom fixed-top py-2"
+            style="z-index: 1031;background-color: black;">
+            <a class="navbar-brand" href="index.html">
+                <img class="logo-icon mr-2"
+                    src="https://penguinin.com/penguinin.com/wp-content/uploads/2018/05/logo.png" alt="logo"
+                    style="width: 150px;" />
+
+                <span class="logo-text  d-none d-md-inline">Penguin<span class="text-alt" style="color:orange">IN</span>
+                    Developer</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto mr-3">
+                    <a class="nav-link" href="https://penguinin.com/about-us/" target="_blank">PenguinIN</a>
+                    <a class="nav-link" href="index.html">Home</a>
+
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar bg-light fixed-top border-bottom" style="top: 59px;">
+            <button id="docs-sidebar-toggler" class="docs-sidebar-toggler" type="button" style="font-size: 20px;">
+                <i class="fa fa-bars"></i>
+            </button>
+        </nav>
+
+        <div class="docs-wrapper">
+
+
+
+        </div>
+        <div class="container" style="margin-bottom:52px ;">
+            <article class="docs-article" id="section-1">
+                <header class="docs-header">
+                    <div class="guide">
+                        <h1>SDK Methods</h1>
+
+
+
+                        <p>
+                            In this section we present the methods availed to the application
+                            developer through our SDK followed by best practices to integrate it
+                            within a mobile application.
+                        </p>
+                        <br />
+
+
+                        <h2 id="initialize" class="opensub">
+                            <span class="initialize-number">1.1</span>
+
+                            Initialize
+
+                            <i class="fas fa-sort-down"></i>
+                        </h2>
+                        <div style="display:none;" class="intilazediiv">
+                            <p style="font-weight: bold;">
+                                Returns initialization success or failure value.
+
+
+                            </p><br />
+                            <h3 id="operation">SDK Configuration</h3>
+                            <p>These steps describe the process of initialization:</p>
+                            <ul>
+                                <li>Validate configurations.</li>
+                                <li>Validate OS support.</li>
+
+                                <li>Initialize input sources for detection platform.</li>
+                            </ul>
+                            <p>
+
+                                Save the results and Log for analytics (if supported)
+
+
+                            </p> <br />
+
+
+
+                            <h3 id="parameters">SDK Configuration</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left">Parameters</th>
+                                        <th style="text-align: left">Description</th>
+                                        <th style="text-align: left">Value Type</th>
+                                        <th style="text-align: left">Mandatory</th>
+                                        <th style="text-align: left">Default Value</th>
+                                    </tr>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: left">Server IP</td>
+                                        <td style="text-align: left">API IP address</td>
+                                        <td style="text-align: left">String</td>
+                                        <td style="text-align: left">Yes</td>
+                                        <td style="text-align: left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">Service Name</td>
+                                        <td style="text-align: left">Data API service name</td>
+                                        <td style="text-align: left">String</td>
+                                        <td style="text-align: left">Yes</td>
+                                        <td style="text-align: left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">userName</td>
+                                        <td style="text-align: left">Front End UserID</td>
+                                        <td style="text-align: left">String</td>
+                                        <td style="text-align: left">Yes</td>
+                                        <td style="text-align: left"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: left">Enable Log</td>
+                                        <td style="text-align: left">Enable\Disable SDK log</td>
+                                        <td style="text-align: left">Boolean</td>
+                                        <td style="text-align: left">No</td>
+                                        <td style="text-align: left">False</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+
+
+
+
+                            <br>
+                        </div>
+                        <h2 class="opensub" id="isready">
+                            <span class="initialize-number">1.2</span>
+                            StartScanner
+                            <i class="fas fa-sort-down"></i>
+                        </h2>
+                        <div style="display:none;" class="intilazediiv">
+                            <p style="font-weight: bold;">
+                                Start BLE Scanner and start fetch PoIs
+                                <br />
+                            </p>
+
+
+
+
+
+
+                            <h3 id="parameters-2">Parameters</h3>
+                            <p>
+                                <strong>N/A</strong>
+                            </p> <br />
+
+                            <h3 id="parameters-1">Response</h3>
+                            <p>
+                                <strong>N/A</strong>
+                            </p> <br />
+
+
+
+                        </div>
+                        <h2 id="checkerror" class="opensub">
+                            <span class="initialize-number">1.3</span>
+                            GetDetectedPoIs
+                            <i class="fas fa-sort-down"></i>
+                        </h2>
+                        <div style="display:none;" class="intilazediiv">
+                            <p style="font-weight: bold;">
+                                Returns list of detected PoIs with trust factor for each. <br />
+                            </p>
+                            <h3 id="parameters-2">Parameters</h3>
+                            <p>
+                                <strong>N/A</strong>
+                            </p> <br />
+
+                            <h3 id="response-2">Response</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left">Value</th>
+                                        <th style="text-align: left">Description</th>
+                                        <th style="text-align: left">Value Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: left">result</td>
+                                        <td style="text-align: left">Detected PoIs</td>
+                                        <td style="text-align: left">[PoI]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+
+                            <h3 id="response-2">
+                                PoI Model exposed from SDK
+                            </h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: left">Value</th>
+                                        <th style="text-align: left">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td style="text-align: left">id</td>
+                                        <td style="text-align: left">PoI ID</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="text-align: left">name</td>
+                                        <td style="text-align: left">PoI Name</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="text-align: left">trustFactor</td>
+                                        <td style="text-align: left">Detection trust factor as percentage %
+                                        </td>
+                                    </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+
+
+
+
+
+
+                        <h2 id="checkerror" class="opensub">
+                            <span class="initialize-number">1.4</span>Trigger Functions
+                            <i class="fas fa-sort-down"></i>
+                        </h2>
+                        <div style="display:none;" class="intilazediiv">
+                            <p style="font-weight: bold;">
+                                Can be used to define trigger functions on data changes in SDK. <br />
+                            </p>
+                            <br>
+                            <ul>
+                                <li>
+                                    didStartPenguinIn ()
+                                    <br>
+                                    <p style="font-weight: bold; margin-top: 10px;">fired when initializing SDK.
+                                    </p>
+
+                                    <h3 id="response-2">Response</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left">Value</th>
+                                                <th style="text-align: left">Description</th>
+                                                <th style="text-align: left">Value Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: left">result</td>
+                                                <td style="text-align: left">Detected PoIs</td>
+                                                <td style="text-align: left">[PoI]</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </li>
+
+
+                                <li>
+                                    didPointOfInterestChange (result:[PoI])
+                                    <br>
+                                    <p style="font-weight: bold; margin-top: 10px;">Returns list of detected PoIs with
+                                        trust factor for each.
+                                    </p>
+
+                                    <h3 id="response-2">Response</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left">Value</th>
+                                                <th style="text-align: left">Description</th>
+                                                <th style="text-align: left">Value Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: left">result</td>
+                                                <td style="text-align: left">Detected PoIs</td>
+                                                <td style="text-align: left">[PoI]</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </li>
+
+
+                                <li>
+                                    didFailInitilize (msg: String)
+                                    <br>
+                                    <p style="font-weight: bold; margin-top: 10px;">fired when failed to initialize SDK
+                                        trust factor for each.
+                                    </p>
+
+                                    <h3 id="response-2">Response</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left">Value</th>
+                                                <th style="text-align: left">Description</th>
+                                                <th style="text-align: left">Value Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: left">msg</td>
+                                                <td style="text-align: left">Error message </td>
+                                                <td style="text-align: left">String</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+                                </li>
+
+
+                                <li>
+                                    didCompleteLoading (msg: String)
+                                    <br>
+                                    <p style="font-weight: bold; margin-top: 10px;">fired when complete loading data
+                                    </p>
+
+                                    <h3 id="response-2">Response</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left">Value</th>
+                                                <th style="text-align: left">Description</th>
+                                                <th style="text-align: left">Value Type</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="text-align: left">msg</td>
+                                                <td style="text-align: left">Return status message </td>
+                                                <td style="text-align: left">String</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <br />
+
+                                    <h3 id="response-2">SDK status Progress Look Up</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: left">Value</th>
+                                                <th style="text-align: left">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <td style="text-align: left">None</td>
+                                                <td style="text-align: left">Not initialized yet</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align: left">Initializing</td>
+                                                <td style="text-align: left">Initializing process</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align: left">LoadingData</td>
+                                                <td style="text-align: left">Loading beacons and PoIs data for detection
+                                                    process</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align: left">EmptyScanFilter</td>
+                                                <td style="text-align: left">SDK doesn’t have any beacon for scan
+                                                    Loading error or empty data</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="text-align: left">Detection</td>
+                                                <td style="text-align: left">SDK is ready and detection mode running
+                                                    successfully.</td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+
+                                </li>
+
+
+                            </ul>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </header>
+
+            </article>
+
+
+            <br class="space">
+
+            <br class="space">
+            <br class="space">
+
+            <br class="space">
+            <br class="space">
+            <br class="space">
+            <br class="space">
+
+            <br class="space">
+            <br class="space">
+
+
+
+
+
+        </div>
+
+
+        <footer class="footer-wrapper">
+            <p class="text-center">
+                7700 Irvine Center Drive Irvine CA 92618, USA
+            </p>
+            <div class="footer-social-icons d-flex justify-content-center my-4">
+                <a href="https://www.linkedin.com/company/penguinin/" target="_blank" style="color: white;">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCKKwXDxzrCHxaJw1jz5GT0g?view_as=subscriber" target="_blank"
+                    style="color: white;">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col d-none d-md-block"></div>
+                <div class="col">
+                    <ul>
+                        <li>RESOURCES</li>
+                        <li>
+                            <a href="android.html" target="_blank" style="color: white;">Android SDK</a>
+                        </li>
+                        <li>
+                            <a href="iOS.html" target="_blank" style="color: white;">iOS SDK</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>SUPPORT</li>
+
+                        <li>
+                            <a href="https://penguinin.com/contact-us/" target="_blank" style="color: white;">Contact
+                                us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>ABOUT PenguinIN</li>
+                        <li>
+                            <a href="https://penguinin.com/about-us/" target="_blank" style="color: white;">PenguinIN
+                                Website</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col d-none d-md-block"></div>
+            </div>
+        </footer>
+    </div>
+    <!--//docs-wrapper-->
+    </div>
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Page Specific JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script>
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>
+    <script src="assets/js/docs.js"></script>
+    <script>
+
+
+
+
+        document.querySelectorAll('.closelist').forEach(item => {
+            item.addEventListener('click', event => {
+                $(".childiv").removeClass("childiv2")
+
+                var ele = $($(item).children()[0]).attr("href")
+                $(ele).click()
+                $(".childiv").addClass("closep")
+            })
+        })
+
+
+
+
+        $('.opensub').on('click', function () {
+            $('.opensub').removeClass("custom-subheading");
+            $(this)
+                .toggleClass("custom-subheading")
+                .next('div.intilazediiv')
+                .toggleClass("intilazediv")
+                .siblings('div.intilazediiv')
+                .removeClass('intilazediv');
+            $(this)
+                .children('i')
+                .toggleClass('fa-sort-down fa-sort-up')
+                .parent('h2.opensub')
+                .siblings('h2.opensub')
+                .find('i')
+                .removeClass('fa-sort-up')
+                .addClass('fa-sort-down')
+            // .toggleClass("intilazediv").parent('div').find('div.intilazediiv').removeClass('intilazediv')
+            const $nextDiv = $(this).next('div.intilazediiv');
+            if (!$nextDiv.hasClass('intilazediv')) {
+                $(this).removeClass("custom-subheading");
+            }
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
