@@ -100,9 +100,8 @@
             <br>
             <p>
               To Download the Android SDK and Sample app <a
-                href="https://penguinin-my.sharepoint.com/:u:/p/devsupport/EeJFn9vifNxNqHYpaqmz1YkB87r_6CfTz3qZBiqJFMcIUw?e=Nx4qb6&download=1"
-                style="display: inline;font-weight: bold; text-decoration: underline;" 
-                class="fqalink">Click here.</a>
+                href="https://penguinin-my.sharepoint.com/:u:/p/devsupport/ERpYHQglIlJJmStgAq2BQiwBHSrov-phJbuuRZOW6zoRbg?download=1"
+                style="display: inline;font-weight: bold; text-decoration: underline;" class="fqalink">Click here.</a>
 
             </p>
             <br>
@@ -188,13 +187,95 @@
               <li style="padding-bottom: 0">Active Context.</li>
               <li style="padding-bottom: 0">Active Activity.</li>
               <li style="padding-bottom: 0">User Name.</li>
+              <li style="padding-bottom: 0">Enable\Disable Log.</li>
 
 
             </ul>
-            <p>
-              <strong> Code Example:
-              </strong>
-            </p>
+
+
+
+            <h1 id="sdk-and-sample-app-configuration" class="custom-header mt-2">
+              Debugging SDK results
+            </h1>
+
+            <ul>
+              <li style="padding-bottom: 0" class="mb-2"><strong>SDK will log all data into offline text files:</strong>
+
+                <ul>
+                  <li style="padding-bottom: 0" class="mb-2">Files Destination:
+                    <ul>
+                      <li style="padding-bottom: 0">Storage\PenguinIN\Aquarium SDK\Log\ </li>
+                    </ul>
+                  </li>
+                  <li style="padding-bottom: 0" class="mb-2">Files:
+
+                    <ul>
+                      <li style="padding-bottom: 0">exceptionLog.txt </li>
+                      <li style="padding-bottom: 0">Logic Log.txt </li>
+                      <li style="padding-bottom: 0">Scanner Log.txt </li>
+
+                    </ul>
+
+                  </li>
+
+                </ul>
+
+              </li>
+
+
+              <li style="padding-bottom: 0" class="mb-2"><strong>Start Debugging:</strong>
+
+                <ul>
+                  <li style="padding-bottom: 0" class="mb-2">Delete all existed log files.
+
+                  </li>
+                  <li style="padding-bottom: 0" class="mb-2">Enable Log configuration when initializing the SDK:
+
+                    <ul>
+                      <li style="padding-bottom: 0"> .setEnableLog(true) </li>
+
+
+                    </ul>
+
+
+
+                  </li>
+
+
+                  <li style="padding-bottom: 0" class="mb-2">Use “setManualPoiID” SDK method to log the ground truth PoI
+                    ID:
+
+                    <ul>
+                      <li style="padding-bottom: 0">PenguinAPI.setManualPoiID(manualID); </li>
+
+
+                    </ul>
+
+
+
+                  </li>
+
+
+
+                  <li style="padding-bottom: 0" class="mb-2">After closing the App, get log files and send them by
+                    email.
+
+
+                  </li>
+
+
+
+                </ul>
+
+              </li>
+
+
+
+
+
+            </ul>
+
+            <h1 id="Code-Example" class="custom-header mt-2">Code Example</h1>
             <ul>
               <li style="padding-bottom: 0">
                 <strong>initialization code</strong>
@@ -222,6 +303,7 @@
               </li>
 
             </ul>
+
             <br class="space">
             <br class="space">
 
